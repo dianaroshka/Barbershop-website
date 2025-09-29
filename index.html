@@ -1,0 +1,613 @@
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .service-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .service-price {
+            color: #8a5a44;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        .service-description {
+            margin-top: 10px;
+            color: #666;
+        }
+        
+        /* Стилі для сторінки контактів */
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .contact-details, .map {
+            flex: 1;
+            min-width: 300px;
+            margin: 15px;
+        }
+        
+        .contact-details {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .contact-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-item i {
+            color: #8a5a44;
+            margin-right: 15px;
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+        
+        .map {
+            background-color: #e8c4b4;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+        }
+        
+        .map-placeholder {
+            text-align: center;
+            color: #8a5a44;
+        }
+        
+        /* Стилі для форми зворотного зв'язку */
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: #8a5a44;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #6d4532;
+        }
+        
+        /* Стилі для футера */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        .footer-info {
+            margin-bottom: 15px;
+        }
+        
+        .social-links {
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
+        
+        /* Адаптивність */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 5px 0;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .features {
+                flex-direction: column;
+            }
+        }
+
+</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Сайт розроблено студенткою Рошошко Діаною, група ФЕМП-5-3з -->
+    <header>
+        <div class="container">
+            <h1>Перукарня "Стиль & Елегантність"</h1>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#" class="nav-link active" data-page="home">Головна</a></li>
+                <li><a href="#" class="nav-link" data-page="services">Послуги</a></li>
+                <li><a href="#" class="nav-link" data-page="contacts">Контакти</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="container">
+        <!-- Головна сторінка -->
+        <section id="home" class="page active">
+            <div class="hero">
+                <h2>Ваша краса - наша професія</h2>
+                <p>Ми створюємо неперевершені образи, що підкреслюють вашу індивідуальність та природну красу</p>
+                <a href="#" class="btn nav-link" data-page="services">Наші послуги</a>
+            </div>
+            
+            <h2>Чому обирають нас?</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-cut"></i>
+                    <h3>Професійні майстри</h3>
+                    <p>Наші спеціалісти мають багаторічний досвід та регулярно підвищують кваліфікацію</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-spa"></i>
+                    <h3>Якісні матеріали</h3>
+                    <p>Використовуємо тільки сертифіковану професійну косметику провідних брендів</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-users"></i>
+                    <h3>Індивідуальний підхід</h3>
+                    <p>Для кожного клієнта ми розробляємо персональний підхід та стиль</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Сторінка послуг -->
+        <section id="services" class="page">
+            <h2>Наші послуги</h2>
+            <p>Ми пропонуємо широкий спектр послуг для догляду за волоссям та створення ідеального образу</p>
+            
+            <div class="services-list" id="services-container">
+                <!-- Список послуг буде динамічно заповнений через JavaScript -->
+            </div>
+        </section>
+        
+        <!-- Сторінка контактів -->
+        <section id="contacts" class="page">
+            <h2>Контакти</h2>
+            
+            <div class="contact-info">
+                <div class="contact-details">
+                    <h3>Наша адреса</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p>м. Київ, вул. Хрещатик, 25</p>
+                            <p>Перукарня "Стиль & Елегантність"</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Контактна інформація</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <p>+38 (044) 123-45-67</p>
+                            <p>+38 (067) 123-45-67</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p>info@style-elegance.com</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Графік роботи</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <p>Пн-Пт: 9:00 - 20:00</p>
+                            <p>Сб-Нд: 10:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перукарня "Стиль & Елегантність"</title>
+    <style>
+        /* Загальні стилі */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Стилі для заголовків */
+        h1, h2, h3 {
+            color: #8a5a44;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid #e8c4b4;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+        
+        /* Стилі для навігації */
+        nav {
+            background-color: #8a5a44;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav li {
+            margin: 0 15px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover, nav a.active {
+            background-color: #6d4532;
+        }
+        
+        /* Стилі для контенту сторінок */
+        .page {
+            display: none;
+            padding: 40px 0;
+            min-height: 70vh;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        /* Стилі для головної сторінки */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+        
+        .hero h2 {
+            color: white;
+            border: none;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #8a5a44;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #6d4532;
+        }
+        
+        .features {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .feature {
+            flex: 1;
+            min-width: 250px;
+            margin: 15px;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .feature i {
+            font-size: 2.5rem;
+            color: #8a5a44;
+            margin-bottom: 15px;
+        }
+        
+        /* Стилі для сторінки послуг */
+        .services-list {
+            display: grid;
+
+<div class="map">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt fa-3x"></i>
+                        <p>Тут буде карта</p>
+                        <p>м. Київ, вул. Хрещатик, 25</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Форма зворотного зв'язку</h3>
+            <div class="contact-form">
+                <form id="feedback-form">
+                    <div class="form-group">
+                        <label for="name">Ваше ім'я</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Номер телефону</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Повідомлення</label>
+                        <textarea id="message" name="message" placeholder="Опишіть, які послуги вас цікавлять..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Надіслати повідомлення</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <p>Перукарня "Стиль & Елегантність"</p>
+                <p>Розроблено: Рошошко Діана, група ФЕМП-5-3з</p>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Дані про послуги
+        const services = [
+            {
+                id: 1,
+                name: "Жіноча стрижка",
+                price: 450,
+                description: "Стрижка з урахуванням структури волосся та форми обличчя"
+            },
+            {
+                id: 2,
+                name: "Чоловіча стрижка",
+                price: 300,
+                description: "Класична або модна стрижка з оформленням бороди та вусів"
+            },
+            {
+                id: 3,
+                name: "Фарбування волосся",
+                price: 800,
+                description: "Повне фарбування з використанням якісних фарб"
+            },
+            {
+                id: 4,
+                name: "Мелківець/Балаяж",
+                price: 1200,
+                description: "Створення природного градієнту кольору"
+            },
+            {
+                id: 5,
+                name: "Укладка",
+                price: 350,
+                description: "Укладка волосся феном та щіткою з фіксацією"
+            },
+            {
+                id: 6,
+                name: "Вечірня зачіска",
+                price: 600,
+                description: "Елегантна зачіска для особливих випадків"
+            },
+            {
+                id: 7,
+                name: "Ламінування",
+                price: 900,
+                description: "Процедура для здорового блиску та міцності волосся"
+            },
+            {
+                id: 8,
+                name: "Кератинове випрямлення",
+                price: 1500,
+                description: "Випрямлення та відновлення волосся"
+            }
+        ];
+
+        // Функція для відображення послуг
+        function displayServices() {
+            const container = document.getElementById('services-container');
+            container.innerHTML = '';
+            
+            services.forEach(service => {
+                const serviceElement = document.
+
+createElement('div');
+                serviceElement.className = 'service-item';
+                serviceElement.innerHTML = `
+                    <div class="service-name">${service.name}</div>
+                    <div class="service-price">${service.price} грн</div>
+                    <div class="service-description">${service.description}</div>
+                `;
+                container.appendChild(serviceElement);
+            });
+        }
+
+        // Функція для навігації між сторінками
+        function setupNavigation() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pages = document.querySelectorAll('.page');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Видаляємо активний клас з усіх посилань
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    // Додаємо активний клас до поточного посилання
+                    this.classList.add('active');
+                    
+                    // Отримуємо ідентифікатор сторінки
+                    const pageId = this.getAttribute('data-page');
+                    
+                    // Приховуємо всі сторінки
+                    pages.forEach(page => page.classList.remove('active'));
+                    // Показуємо потрібну сторінку
+                    document.getElementById(pageId).classList.add('active');
+                });
+            });
+        }
+
+        // Функція для обробки форми зворотного зв'язку
+        function setupForm() {
+            const form = document.getElementById('feedback-form');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Отримуємо дані з форми
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                
+                // Тут ми б відправляли дані на сервер, але за вимогами просто показуємо повідомлення
+                alert(`Дякуємо, ${name}! Ваше повідомлення отримано. Ми зв'яжемося з вами найближчим часом.`);
+                
+                // Очищаємо форму
+                form.reset();
+            });
+        }
+
+        // Ініціалізація після завантаження DOM
+        document.addEventListener('DOMContentLoaded', function() {
+            displayServices();
+            setupNavigation();
+            setupForm();
+        });
+    </script>
+</body>
+</html>
